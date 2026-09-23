@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Tab Groups",
+  "version": "0.1.0",
+  "description": "Automatically groups related tabs by how they were opened.",
+  "author": "Rob Taylor",
+  "homepage_url": "https://github.com/manix84/ext-smart-tab-groups",
+  "permissions": ["storage", "tabGroups"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "scripts": ["assets/background.js"],
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["assets/content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "Smart Tab Groups settings"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smart-tab-groups@manix84.github.io",
+      "strict_min_version": "138.0"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and support
+    url: https://github.com/manix84/ext-smart-tab-groups/discussions
+    about: Ask for help without opening a bug.
+  - name: Private security report
+    url: https://github.com/manix84/ext-smart-tab-groups/security/advisories/new
+    about: Report vulnerabilities privately.
